@@ -1,0 +1,13 @@
+# test 4 zapytanie 1 to test 1 zapytanie 1 (createNewGroup)
+# test 4 zapytanie 2 to test 2 zapytanie 2 (addMemberToGroup)
+
+# test 4 zapytanie 3
+query getGroupDebts($groupId: ID!) {
+    groupDebts(groupId: $groupId) {
+        id
+        amount
+        title
+        debtor { id email }
+        creditor { id email }
+    }
+}

@@ -1,0 +1,8 @@
+# test 5 zapytanie 1 to test 1 zapytanie 1 (createNewGroup)
+# test 5 zapytanie 2 to test 2 zapytanie 2 (addMemberToGroup)
+# test 5 zapytanie 3 to test 4 zapytanie 3 (getGroupDebts)
+
+# test 5 zapytanie 4
+mutation addGroupTransaction($data: GroupTransactionInput!) {
+    addGroupTransaction(groupTransactionDTO: $data)
+}

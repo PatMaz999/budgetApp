@@ -1,0 +1,11 @@
+# test 2 zapytanie 1  1 zapytanie 1 (mutation createNewGroup)
+
+# test 2 zapytanie 2
+mutation addMemberToGroup($membershipData: MembershipInput!) {
+    addMember(membershipDTO: $membershipData) {
+        id
+        userId
+        groupId
+        userEmail
+    }
+}

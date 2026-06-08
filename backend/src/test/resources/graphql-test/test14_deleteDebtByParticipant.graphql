@@ -1,0 +1,3 @@
+mutation deleteManualDebt($id: ID!) {
+    deleteDebt(debtId: $id)
+}

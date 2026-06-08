@@ -1,0 +1,17 @@
+# test 1 zapytanie 1
+mutation createNewGroup($groupData: GroupInput!) {
+    createGroup(groupDTO: $groupData){
+        id
+        name
+        ownerId
+    }
+}
+
+# test 1 zapytanie 2
+query getCurrentUserGroups{
+    myGroups {
+        id
+        name
+        ownerId
+    }
+}

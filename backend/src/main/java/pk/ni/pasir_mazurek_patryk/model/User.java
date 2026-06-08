@@ -1,0 +1,30 @@
+package pk.ni.pasir_mazurek_patryk.model;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+@Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @NotBlank(message = "Nazwa uzytkownika jest wymagana")
+    private String username;
+
+    @Email(message = "Podaj poprawny adres e-mail")
+    @NotBlank(message = "Adres e-mail jest wymagany")
+    @Column(nullable = false, unique = true)
+    private String email;
+
+    @NotBlank(message = "Haslo nie moze byc puste")
+    private String password;
+
+    private String currency = "PLN";
+}

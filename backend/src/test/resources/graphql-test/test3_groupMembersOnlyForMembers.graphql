@@ -1,0 +1,12 @@
+# test 3 zapytanie 1 to test 1 zapytanie 1 (createNewGroup)
+# test 3 zapytanie 2 to test 2 zapytanie 2 (addMemberToGroup)
+
+# test 3 zapytanie 3
+query getGroupMembers($groupId: ID!) {
+    groupMembers(groupId: $groupId) {
+        id
+        userId
+        groupId
+        userEmail
+    }
+}
